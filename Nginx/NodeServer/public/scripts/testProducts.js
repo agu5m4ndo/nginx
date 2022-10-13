@@ -1,5 +1,4 @@
-const port = process.argv[3];
-const socket = io(`http://localhost:${port}/test`);
+const socket = io(`http://localhost/test`);
 const table = document.getElementById('table');
 
 const createTable = (productos) => {
@@ -15,7 +14,7 @@ const createTable = (productos) => {
 }
 
 const createProductList = async() => {
-    const productos = await fetch(`http://localhost:${port}/api/productos-test`)
+    const productos = await fetch(`http://localhost/api/productos-test`)
         .then(res => res.json())
         .then(data => { return data; })
     createTable(productos.array);

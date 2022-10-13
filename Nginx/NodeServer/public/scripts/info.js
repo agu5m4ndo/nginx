@@ -1,9 +1,7 @@
-const port = process.argv[3]; //Esta posición guarda el puerto dentro de los argumentos
-
-const socket = io(`http://localhost:${port}/info`);
+const socket = io(`http://localhost/info`);
 
 const getData = async() => {
-    const result = await fetch(`http://localhost:${port}/info/data`)
+    const result = await fetch(`http://localhost/info/data`)
         .then(res => res.json())
         .then(result => { return result.data })
     renderData(result)

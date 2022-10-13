@@ -1,5 +1,3 @@
-const port = process.argv[3];
-
 const loadName = (session) => {
     return fetch('../views/login.hbs')
         .then(response => response.text())
@@ -13,7 +11,7 @@ const loadName = (session) => {
 }
 
 const getSessionInfo = async() => {
-    const session = await fetch(`http://localhost:${port}/login/session`)
+    const session = await fetch(`http://localhost/login/session`)
         .then(res => res.json())
         .then(data => { return data; })
     loadName(session);

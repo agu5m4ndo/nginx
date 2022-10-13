@@ -1,5 +1,4 @@
-const port = process.argv[3];
-const socket = io(`http://localhost:${port}/`);
+const socket = io(`http://localhost/`);
 
 //-------------------------------LISTA DE PRODUCTOS---------------------------------
 
@@ -40,7 +39,7 @@ const createTable = (productos) => {
 
 //Obtiene la lista de productos
 const createProductList = async() => {
-    const productos = await fetch(`http://localhost:${port}/api/productos`)
+    const productos = await fetch(`http://localhost/api/productos`)
         .then(res => res.json())
         .then(data => { return data; })
     createTable(productos.result);

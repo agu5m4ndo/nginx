@@ -102,7 +102,7 @@ io.of('/').on('connection', async(socket) => { //ruta principal
     socket.emit('login')
 
     socket.on('new-product', (products) => {
-        axios.post(`http://localhost:${port}/api/productos`, products)
+        axios.post(`http://localhost/api/productos`, products)
         io.sockets.emit('products')
     })
 

@@ -1,5 +1,4 @@
-const port = process.argv[3];
-const socket = io(`http://localhost:${port}/logout`);
+const socket = io(`http://localhost/logout`);
 
 const closingMessage = (session) => {
     return fetch('../views/logout.hbs')
