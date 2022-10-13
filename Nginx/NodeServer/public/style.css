@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "nova";
+    src: url(./font/FontsFree-Net-proxima_nova_reg-webfont.ttf);
+}
+
+body {
+    padding: 20px;
+    font-family: 'nova';
+}
+
+form {
+    width: 30vw;
+}
+
+button {
+    margin-bottom: 15px;
+}
+
+img {
+    width: 50px;
+}
+
+table {
+    width: 50vw !important;
+}
+
+#username-div {
+    display: flex;
+    justify-content: space-between;
+}

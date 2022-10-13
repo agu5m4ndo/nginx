@@ -1,0 +1,8 @@
+<div class="m-4">
+<div id="username-div" class="alert alert-success alert-dismissible fade show">
+    <h3><strong>Bienvenido {{session.username}}</strong></h3> 
+    <form action="http://localhost:8080/logout" method="get">
+        <button type="submit"  id="logout" class="btn btn-danger">Logout</button>
+    </form>
+</div>
+<br>

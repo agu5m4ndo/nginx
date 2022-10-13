@@ -1,0 +1,24 @@
+{{#if value}}
+    <hr>
+    <span id="messages"></span>
+    <form onsubmit="return false;"> <!--Unicamente lo modifiqué para el index con e.preventDefault()-->
+        <h2>Centro de Mensajes</h2>
+        <div id="contenedor-mensaje" style="width:50vw; height:30vh; padding:5px; overflow-y: scroll;border:1px solid #666; border-radius: 3px">
+            {{#each message}}
+                <p><span style="color: blue"><b>{{this.email}}</b></span> 
+                  [<span style="color: brown">{{this.date}}</span>]
+                  <span style="color: green"><i>{{this.content}}</i></span>
+                </p>
+            {{/each}}
+        </div><br>
+        <input type="text" placeholder="Escribe tu mensaje" class="form-control" id="mensaje"><br>
+        <input type="button" onclick="newMessage()" value="Enviar mensaje" class="btn btn-success" id="send-message">
+    </form>
+{{else}}
+    <br>
+    <form id="emailForm"> <!--Evita que pueda recargar la página al presionar enter-->
+        <h2>Centro de Mensajes</h2>
+        <input type="text" placeholder="Ejemplo@gmail.com" class="form-control" id="mail"><br>
+        <button type="button" onclick="load()" id="send-email" class="btn btn-success">Ingresar</button>
+    </form>
+{{/if}}
