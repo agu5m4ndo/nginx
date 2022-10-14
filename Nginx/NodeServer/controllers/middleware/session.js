@@ -5,7 +5,7 @@ const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true }
 
 module.exports = session({
     store: MongoStore.create({
-        mongoUrl: 'mongodb://usuarioCoderhouse:coderhouse@nodeexpressproject.r8xsu.mongodb.net/session-products-api?retryWrites=true&w=majority',
+        mongoUrl: "mongodb+srv://usuarioCoderhouse:coderhouse@nodeexpressproject.r8xsu.mongodb.net/?retryWrites=true&w=majority",
         mongoOptions: advancedOptions
     }),
     secret: "coderhouse",

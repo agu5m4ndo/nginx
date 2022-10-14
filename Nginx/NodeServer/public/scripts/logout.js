@@ -13,7 +13,7 @@ const closingMessage = (session) => {
 }
 
 const sessionInfo = async() => {
-    const session = await fetch(`http://localhost:${port}/login/session`)
+    const session = await fetch(`http://localhost/login/session`)
         .then(res => res.json())
         .then(data => { return data; })
     closingMessage(session);
